@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css'
-import { DebugData } from "../utils/debugData";
-import { FetchNui } from "../utils/fetchNui";
+import { DebugData } from "./utils/DebugData";
+import { FetchNui } from "./utils/FetchNui";
 
 // This will set the NUI to visible if we are
 // developing in browser
@@ -15,7 +15,7 @@ DebugData([
 const App: React.FC = () => {
 	return (
 		<div>
-			
+
 		</div>
 	);
 }

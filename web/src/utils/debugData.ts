@@ -1,4 +1,4 @@
-import { isEnvBrowser } from './misc';
+import { isEnvBrowser } from './Misc';
 
 interface DebugEvent<T = any> {
 	action: string;
