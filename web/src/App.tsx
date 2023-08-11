@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './App.css'
+import React, { useState } from "react";
+import "./App.css"
 import { DebugData } from "./utils/DebugData";
 import { FetchNui } from "./utils/FetchNui";
 
@@ -7,7 +7,7 @@ import { FetchNui } from "./utils/FetchNui";
 // developing in browser
 DebugData([
 	{
-		action: 'visible',
+		action: "visible",
 		data: true,
 	}
 ])

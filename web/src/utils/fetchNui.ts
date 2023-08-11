@@ -2,7 +2,7 @@ import { isEnvBrowser } from "./Misc";
 
 /**
  * Simple wrapper around fetch API tailored for CEF/NUI use. This abstraction
- * can be extended to include AbortController if needed or if the response isn't
+ * can be extended to include AbortController if needed or if the response isn"t
  * JSON. Tailor it to your needs.
  *
  * @param eventName - The endpoint eventname to target
@@ -14,16 +14,16 @@ import { isEnvBrowser } from "./Misc";
 
 export async function FetchNui<T = any>(eventName: string, data?: any, mockData?: T): Promise<T> {
 	const options = {
-		method: 'post',
+		method: "post",
 		headers: {
-			'Content-Type': 'application/json; charset=UTF-8',
+			"Content-Type": "application/json; charset=UTF-8",
 		},
 		body: JSON.stringify(data),
 	};
 
 	if (isEnvBrowser() && mockData) return mockData;
 
-	const resourceName = (window as any).GetParentResourceName ? (window as any).GetParentResourceName() : 'nui-frame-app';
+	const resourceName = (window as any).GetParentResourceName ? (window as any).GetParentResourceName() : "nui-frame-app";
 
 	const resp = await fetch(`https://${resourceName}/${eventName}`, options);
 

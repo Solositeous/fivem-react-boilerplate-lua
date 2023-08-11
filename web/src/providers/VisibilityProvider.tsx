@@ -15,7 +15,7 @@ interface VisibilityProviderValue {
 export const VisibilityProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 	const [visible, setVisible] = useState(false)
 
-	UseNuiEvent<boolean>('visible', setVisible)
+	UseNuiEvent<boolean>("visible", setVisible)
 
 	// Handle pressing escape/backspace
 	useEffect(() => {
@@ -41,7 +41,7 @@ export const VisibilityProvider: React.FC<{ children: React.ReactNode }> = ({ ch
 				setVisible
 			}}
 		>
-			<div style={{ visibility: visible ? 'visible' : 'hidden' }}>
+			<div style={{ visibility: visible ? "visible" : "hidden" }}>
 				{children}
 			</div>
 		</VisibilityCtx.Provider>)
