@@ -1,7 +1,7 @@
 import React, { Context, createContext, useContext, useEffect, useState } from "react";
 import { UseNuiEvent } from "../utils/UseNuiEvent";
 import { FetchNui } from "../utils/FetchNui";
-import { isEnvBrowser } from "../utils/Misc";
+import { isEnvBrowser } from "../utils/misc";
 
 const VisibilityCtx = createContext<VisibilityProviderValue | null>(null)
 
